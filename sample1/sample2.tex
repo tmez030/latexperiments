@@ -1,12 +1,13 @@
 %
-% First sample - testing some random stuff
+% Beispiel mit KOMA - klappt aber noch nicht
 % !TEX program = lualatex
 %
-\documentclass[a4paper,ngerman,11pt,twocolumn]{article}
+\documentclass[twoside,DIV=calc,BCOR=5mm,12pt,ngerman,twocolumn]{scrartcl}
+\usepackage{bookman}
 \usepackage{fontspec}
 %\setmainfont[Ligatures=TeX]{Bodoni 72}
-\usepackage{microtype}
-\usepackage{blindtext}
+%\usepackage{microtype}
+%\usepackage{blindtext}
 \usepackage{geometry}
 %\usepackage{dtklogos}
 \usepackage{babel}
@@ -14,10 +15,10 @@
 \usepackage{hyperref}
 
 \hypersetup{
-    pdfauthor={Thomas Mann},
-    pdfsubject={Roman aus dem Jahr 1921},
-    pdftitle={Tonio Kröger},
-    pdfkeywords={Test, Beispiel, lualatex}
+    pdfauthor={James Potter},
+    pdfsubject={Mein Betreff},
+    pdftitle={Mein Titel},
+    pdfkeywords={KOMA, Beispiel}
 }
 
 \title{Tonio Kröger}

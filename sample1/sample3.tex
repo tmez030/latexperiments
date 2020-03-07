@@ -1,0 +1,44 @@
+%
+% Beispiel für einen Brief (gemäß DIN-Standard)
+% !TEX program = lualatex
+%
+% fromrule=afteraddress, fromphone,fromemail,fromlogo, version=last
+\documentclass[foldmarks=true,foldmarks=blmtP,fromrule=afteraddress,
+fromalign=right,fromphone=false,fromemail,fromlogo,
+version=last,fontsize=12pt]{scrlttr2}
+\usepackage[ngerman]{babel}
+\usepackage{blindtext}
+\usepackage{graphics}
+\usepackage{hyperref}
+
+\hypersetup{
+    pdfauthor={Vince Clarke},
+    pdfsubject={Mein Betreff},
+    pdftitle={Mein Titel},
+    pdfkeywords={Test, Beispiel}
+}
+
+\begin{document}
+\setkomavar{fromname}{Vince Clarke}
+% 30 Barkston Gardens, Earl's Court, London SW5 0EN, Vereinigtes Königreich
+
+\setkomavar{fromaddress}{30 Barkston Gardens\\ Earl's Court\\ London SW5 0EN}
+\setkomavar{fromphone}{123~45\,67\,89\,30}
+\setkomavar{fromemail}{vince.clarke@gmail.com}
+\setkomavar{fromlogo}{\includegraphics{vmlogo}}
+\setkomavar{invoice}{123\,456\,789}
+\setkomavar{yourmail}{29.~Feb.~2020}
+
+% BETREFF
+\setkomavar{subject}{Erster Elternabend im Jahr 2020} 
+%\setkomavar{subjectseparator}{X}
+
+\begin{letter}{An die Eltern der\\
+Klasse 5/2 des\\
+Heinrich-Hertz-Gymnasiums}
+\opening{Liebe Eltern,}
+\blindtext
+\closing{Mit freundlichen Grüßen}
+\cc{Klassenlehrer\\ alle Eltern}
+\end{letter}
+\end{document}
